@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 #
-# Test for FakeDetector queue/post-processing script for NZBGet.
-#
 # Copyright (C) 2024 Denis <denis@nzbget.com>
 #
 # This program is free software; you can redistribute it and/or modify it
