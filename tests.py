@@ -33,7 +33,7 @@ test_data_dir = root + '/test_data/'
 tmp_dir = root + '/tmp/'
 dst_dir = root + '/tmp/dst/'
 dwn_dir = root + '/tmp/dwn/'
-test_file = 'film.mp4'
+test_file = 'movie.mp4'
 
 host = '127.0.0.1'
 username = 'TestUser'
@@ -78,7 +78,7 @@ def set_defaults_env():
 
 class Tests(unittest.TestCase):
 
-	def should_do_nothing_if_file_too_small(self):
+	def test_do_nothing_if_file_too_small(self):
 		os.mkdir(tmp_dir)
 		os.mkdir(dwn_dir)
 		shutil.copyfile(test_data_dir + test_file, dwn_dir + test_file)
@@ -88,7 +88,7 @@ class Tests(unittest.TestCase):
 		shutil.rmtree(tmp_dir)
 		self.assertEqual(code, POSTPROCESS_NONE)
 
-	def should_move_the_file(self):
+	def test_move_file(self):
 		os.mkdir(tmp_dir)
 		os.mkdir(dwn_dir)
 		shutil.copyfile(test_data_dir + test_file, dwn_dir + test_file)
