@@ -48,7 +48,7 @@ def get_python():
 
 def run_script():
 	sys.stdout.flush()
-	proc = subprocess.Popen([get_python(), root + '/EasySort.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=os.environ.copy())
+	proc = subprocess.Popen([get_python(), root + '/main.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=os.environ.copy())
 	out, err = proc.communicate()
 	proc.pid
 	ret_code = proc.returncode
