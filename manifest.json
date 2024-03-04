@@ -7,7 +7,7 @@
 	"version": "3.0.0",
 	"author": "Andrey Prygunkov",
 	"license": "GPLv3",
-	"about": "Moves files into other location.",
+	"about": "Moves files after download into other locations.",
 	"queueEvents": "",
 	"description": [
 		" This script moves files with specified extensions into another",
