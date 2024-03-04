@@ -1,0 +1,109 @@
+{
+	"main": "main.py",
+	"name": "EasySort",
+	"homepage": "https://github.com/nzbgetcom/Extension-EasySort/",
+	"kind": "POST-PROCESSING",
+	"displayName": "Easy Sort",
+	"version": "2.0.0",
+	"author": "Andrey Prygunkov",
+	"license": "GPLv3",
+	"about": "Moves files into other location.",
+	"queueEvents": "",
+	"description": [
+		" This script moves files with specified extensions into another",
+		"directory. It can also move into parent directory (flatten mode). In addition",
+		"there is an option to delete source directory with all remaining files."
+	],
+	"requirements": [
+		"This script requires Python 3.8+ to be installed on your system."
+	],
+	"options": [
+		{
+			"name": "DestDir",
+			"displayName": "DestDir",
+			"value": "..",
+			"description": [
+				"Destination directory to move files into.",
+				"",
+				"Set to \"..\" to move into parent directory (flatten mode)."
+			],
+			"select": []
+		},
+		{
+			"name": "Extensions",
+			"displayName": "Extensions",
+			"value": "",
+			"description": [
+				"File extensions to process.",
+				"",
+				"Only files with these extensions are processed. Extensions must",
+				"be separated with commas.",
+				"",
+				"Example=.mkv,.avi,.divx",
+				"",
+				"If the list of extensions is empty all files are processed."
+			],
+			"select": []
+		},
+		{
+			"name": "MinSize",
+			"displayName": "MinSize",
+			"value": "1000",
+			"description": [
+				"Minimum file size (Kilobytes).",
+				"",
+				"Smaller files are ignored."
+			],
+			"select": []
+		},
+		{
+			"name": "Overwrite",
+			"displayName": "Overwrite",
+			"value": "no",
+			"description": [
+				"Overwrite files at destination.",
+				"",
+				"If not active the files are still moved into destination but",
+				"unique suffixes are added at the end of file names, e.g. My.File.(2).mkv."
+			],
+			"select": ["yes", "no"]
+		},
+		{
+			"name": "Cleanup",
+			"displayName": "Cleanup",
+			"value": "yes",
+			"description": [
+				"Delete download directory after renaming.",
+				"",
+				"Delete download directory after processing. If no files could be processed,",
+				"the directory remains untouched."
+			],
+			"select": ["yes", "no"]
+		},
+		{
+			"name": "Preview",
+			"displayName": "Preview",
+			"value": "no",
+			"description": [
+				"Preview mode.",
+				"",
+				"When active no changes to file system are made but the destination",
+				"file names are logged. Useful for debugging."
+			],
+			"select": ["yes", "no"]
+		},
+		{
+			"name": "Verbose",
+			"displayName": "Verbose",
+			"value": "no",
+			"description": [
+				"Print more logging messages.",
+				"",
+				"For debugging or if you need to report a bug."
+			],
+			"select": ["yes", "no"]
+		}
+	],
+	"commands": [],
+	"taskTime": ""
+}
