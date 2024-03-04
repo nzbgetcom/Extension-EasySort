@@ -23,6 +23,7 @@ import os
 import subprocess
 import unittest
 import shutil
+import json
 
 POSTPROCESS_SUCCESS=93
 POSTPROCESS_NONE=95
@@ -47,7 +48,7 @@ def get_python():
 
 def run_script():
 	sys.stdout.flush()
-	proc = subprocess.Popen([get_python(), root + '/EasySort.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=os.environ.copy())
+	proc = subprocess.Popen([get_python(), root + '/main.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=os.environ.copy())
 	out, err = proc.communicate()
 	proc.pid
 	ret_code = proc.returncode
@@ -97,7 +98,14 @@ class Tests(unittest.TestCase):
 		[_, code, _] = run_script()
 		shutil.rmtree(tmp_dir)
 		self.assertEqual(code, POSTPROCESS_SUCCESS)
-		
+
+	def test_manifest(self):
+		with open(root + '/manifest.json', encoding='utf-8') as file:
+			try:
+				json.loads(file.read())
+			except ValueError as e:
+				self.fail('manifest.json is not valid.')
+
 
 if __name__ == '__main__':
 	unittest.main()
