@@ -4,7 +4,7 @@
 	"homepage": "https://github.com/nzbgetcom/Extension-EasySort/",
 	"kind": "POST-PROCESSING",
 	"displayName": "Easy Sort",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"author": "Andrey Prygunkov",
 	"license": "GPLv3",
 	"about": "Moves files into other location.",
