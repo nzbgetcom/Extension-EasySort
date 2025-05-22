@@ -46,7 +46,7 @@ if os.environ['NZBPP_TOTALSTATUS'] != 'SUCCESS':
     sys.exit(POSTPROCESS_NONE)
 
 # Check if all required script config options are present in config file
-required_options = ('NZBPO_DestDir', 'NZBPO_Extensions', 'NZBPO_MinSize',
+required_options = ('NZBPO_DestDir', 'NZBPO_UseCategoryDir', 'NZBPO_UseNzbParentDir', 'NZBPO_Extensions', 'NZBPO_MinSize',
     'NZBPO_Overwrite', 'NZBPO_Cleanup', 'NZBPO_Preview', 'NZBPO_Verbose')
 for optname in required_options:
     if (not optname.upper() in os.environ):
@@ -57,6 +57,8 @@ for optname in required_options:
 nzb_name=os.environ['NZBPP_NZBNAME']
 download_dir=os.environ['NZBPP_DIRECTORY']
 dest_dir=os.environ['NZBPO_DESTDIR']
+useCategoryDir=os.environ['NZBPO_UseCategoryDir'] == 'yes'
+useNzbParentDir=os.environ['NZBPO_UseNzbParentDir'] == 'yes'
 extensions=os.environ['NZBPO_EXTENSIONS'].lower().split(',')
 min_size=int(os.environ['NZBPO_MINSIZE'])
 min_size <<= 10
@@ -73,6 +75,13 @@ if dest_dir == '':
 if not (dest_dir[1] == '/' or dest_dir[1] == '\\' or (len(dest_dir) > 2) and dest_dir[2] == ':'):
     dest_dir = os.path.join(download_dir, dest_dir) 
 dest_dir = os.path.abspath(dest_dir)
+
+if useCategoryDir:
+    dest_dir = os.path.join(dest_dir, os.environ['NZBPP_CATEGORY'])
+
+if useNzbParentDir:
+    dest_dir = os.path.join(dest_dir, os.environ['NZBPP_NZBNAME'])
+
 if verbose:
     print('Normalized dest directory: %s' % dest_dir)
 

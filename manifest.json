@@ -4,7 +4,7 @@
 	"homepage": "https://github.com/nzbgetcom/Extension-EasySort/",
 	"kind": "POST-PROCESSING",
 	"displayName": "Easy Sort",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"author": "Andrey Prygunkov",
 	"license": "GPLv3",
 	"about": "Moves files after download into other locations.",
@@ -23,11 +23,44 @@
 			"displayName": "DestDir",
 			"value": "..",
 			"description": [
-				"Destination directory to move files into.",
+				"Destination directory to move all files into.",
 				"",
 				"Set to \"..\" to move into parent directory (flatten mode)."
 			],
 			"select": []
+		},
+		{
+			"name": "UseCategoryDir",
+			"displayName": "UseCategoryDir",
+			"value": "yes",
+			"description": [
+				"Create subdirectory in <DestDir> based on category-name.",
+				"",
+				"If you use <AppendCategoryDir> you will probably also want this option enabled.",
+				"",
+				"NOTE: It only works with Category*.Name and not Category*.DestDir."
+			],
+			"select": [
+				"yes",
+				"no"
+			]
+		},
+		{
+			"name": "UseNzbParentDir",
+			"displayName": "UseNzbParentDir",
+			"value": "yes",
+			"description": [
+				"Create subdirectory for each nzb-file.",
+				"",
+				"You can combine this option with <UseCategoryDir>.",
+				"",
+				"NOTE: Disabling this option may cause losing data based on your clean-up settings.",
+				"Example: All files in the folder from multiple nzb sources are deleted on import."
+			],
+			"select": [
+				"yes",
+				"no"
+			]
 		},
 		{
 			"name": "Extensions",
@@ -52,7 +85,8 @@
 			"description": [
 				"Minimum file size (Kilobytes).",
 				"",
-				"Smaller files are ignored."
+				"Smaller files are ignored.",
+				"Use \"0\" for including all files."
 			],
 			"select": []
 		},
@@ -66,7 +100,10 @@
 				"If not active the files are still moved into destination but",
 				"unique suffixes are added at the end of file names, e.g. My.File.(2).mkv."
 			],
-			"select": ["yes", "no"]
+			"select": [
+				"yes",
+				"no"
+			]
 		},
 		{
 			"name": "Cleanup",
@@ -78,7 +115,10 @@
 				"Delete download directory after processing. If no files could be processed,",
 				"the directory remains untouched."
 			],
-			"select": ["yes", "no"]
+			"select": [
+				"yes",
+				"no"
+			]
 		},
 		{
 			"name": "Preview",
@@ -90,7 +130,10 @@
 				"When active no changes to file system are made but the destination",
 				"file names are logged. Useful for debugging."
 			],
-			"select": ["yes", "no"]
+			"select": [
+				"yes",
+				"no"
+			]
 		},
 		{
 			"name": "Verbose",
@@ -101,7 +144,10 @@
 				"",
 				"For debugging or if you need to report a bug."
 			],
-			"select": ["yes", "no"]
+			"select": [
+				"yes",
+				"no"
+			]
 		}
 	],
 	"commands": [],
