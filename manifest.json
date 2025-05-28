@@ -4,15 +4,24 @@
 	"homepage": "https://github.com/nzbgetcom/Extension-EasySort/",
 	"kind": "POST-PROCESSING",
 	"displayName": "Easy Sort",
-	"version": "3.1.0",
+	"version": "3.1",
+	"nzbgetMinVersion": "23.0",
 	"author": "Andrey Prygunkov",
 	"license": "GPLv3",
 	"about": "Moves files after download into other locations.",
 	"queueEvents": "",
 	"description": [
-		" This script moves files with specified extensions into another",
-		"directory. It can also move into parent directory (flatten mode). In addition",
-		"there is an option to delete source directory with all remaining files."
+		"This script moves files with specified extensions into another directory.",
+		"It offers flexible organization options:",
+		"",
+		"- Flat Mode: Files are moved into the specified `DestDir` directory.",
+		"- Parent Directory Mode: Files are moved into the parent directory using `DestDir=..` (flattening).",
+		"- Category Subdirectory Mode:  Files are organized into subdirectories within `DestDir` based on the category using `UseCategoryDir`.",
+		"- NZB Parent Subdirectory Mode: Files are organized into subdirectories within `DestDir` based on the NZB filename using `UseNzbParentDir`",
+		"",
+		"You can combine `UseCategoryDir` and `UseNzbParentDir` for further organization.",
+		"",
+		"Additionally, there is an option to delete the source directory with all remaining files."
 	],
 	"requirements": [
 		"This script requires Python 3.8+ to be installed on your system."
@@ -32,7 +41,7 @@
 		{
 			"name": "UseCategoryDir",
 			"displayName": "UseCategoryDir",
-			"value": "yes",
+			"value": "no",
 			"description": [
 				"Create subdirectory in <DestDir> based on category-name.",
 				"",
@@ -48,7 +57,7 @@
 		{
 			"name": "UseNzbParentDir",
 			"displayName": "UseNzbParentDir",
-			"value": "yes",
+			"value": "no",
 			"description": [
 				"Create subdirectory for each nzb-file.",
 				"",
