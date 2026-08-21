@@ -140,6 +140,29 @@ class Tests(unittest.TestCase):
         shutil.rmtree(tmp_dir)
         self.assertEqual(code, POSTPROCESS_SUCCESS)
 
+    def test_move_file_with_unicode_diacritics(self):
+        unicode_nzb = "Sōmething.Vol.2"
+        unicode_category = "Möviés"
+        unicode_file = "Sōmething.Vol.2.mp4"
+        unicode_dwn_dir = root + "/tmp/dwn_sōmething/"
+
+        os.mkdir(tmp_dir)
+        os.mkdir(unicode_dwn_dir)
+        shutil.copyfile(test_data_dir + test_file, unicode_dwn_dir + unicode_file)
+        set_defaults_env()
+        os.environ["NZBPP_DIRECTORY"] = unicode_dwn_dir
+        os.environ["NZBPP_NZBNAME"] = unicode_nzb
+        os.environ["NZBPP_CATEGORY"] = unicode_category
+        os.environ["NZBPO_USENZBPARENTDIR"] = "yes"
+        os.environ["NZBPO_USECATEGORYDIR"] = "yes"
+        os.environ["NZBPO_VERBOSE"] = "yes"
+
+        [out, code, err] = run_script()
+        expected_path = os.path.join(dst_dir, unicode_category, unicode_nzb, unicode_file)
+        self.assertTrue(os.path.exists(expected_path))
+        shutil.rmtree(tmp_dir)
+        self.assertEqual(code, POSTPROCESS_SUCCESS)
+
     def test_manifest(self):
         with open(root + "/manifest.json", encoding="utf-8") as file:
             try:
