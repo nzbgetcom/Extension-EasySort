@@ -1,0 +1,14 @@
+{
+  "about": "Przenosi pliki po pobraniu do innych lokalizacji.",
+  "cleanup_desc": "Usuń katalog pobierania po zmianie nazw.\n\nUsuń katalog pobierania po przetworzeniu. Jeśli żadne pliki nie mogły zostać przetworzone,\nkatalog pozostaje nienaruszony.",
+  "description": "Ten skrypt przenosi pliki o określonych rozszerzeniach do innego katalogu.\nOferuje elastyczne opcje organizacji:\n\n- Tryb płaski: Pliki są przenoszone do określonego katalogu `DestDir`.\n- Tryb katalogu nadrzędnego: Pliki są przenoszone do katalogu nadrzędnego przy użyciu `DestDir=..` (spłaszczanie).\n- Tryb podkatalogu kategorii: Pliki są organizowane w podkatalogach w `DestDir` na podstawie kategorii przy użyciu `UseCategoryDir`.\n- Tryb podkatalogu nadrzędnego NZB: Pliki są organizowane w podkatalogach w `DestDir` na podstawie nazwy pliku NZB przy użyciu `UseNzbParentDir`\n\nMożna łączyć `UseCategoryDir` i `UseNzbParentDir` w celu dalszej organizacji.\n\nDodatkowo istnieje opcja usunięcia katalogu źródłowego wraz ze wszystkimi pozostałymi plikami.",
+  "destdir_desc": "Katalog docelowy, do którego zostaną przeniesione wszystkie pliki.\n\nUstaw na \"..\" aby przenieść do katalogu nadrzędnego (tryb spłaszczania).",
+  "extensions_desc": "Rozszerzenia plików do przetworzenia.\n\nPrzetwarzane są tylko pliki z tymi rozszerzeniami. Rozszerzenia muszą\nbyć oddzielone przecinkami.\n\nExample=.mkv,.avi,.divx\n\nJeśli lista rozszerzeń jest pusta, przetwarzane są wszystkie pliki.",
+  "minsize_desc": "Minimalny rozmiar pliku (kilobajty).\n\nMniejsze pliki są ignorowane.\nUżyj \"0\" aby uwzględnić wszystkie pliki.",
+  "overwrite_desc": "Nadpisuj pliki w miejscu docelowym.\n\nJeśli opcja nie jest aktywna, pliki są nadal przenoszone do miejsca docelowego, ale\ndo końca nazw plików dodawane są unikalne przyrostki, np. My.File.(2).mkv.",
+  "preview_desc": "Tryb podglądu.\n\nGdy aktywny, żadne zmiany w systemie plików nie są dokonywane, ale docelowe\nnazwy plików są rejestrowane. Przydatne do debugowania.",
+  "requirements": "Ten skrypt wymaga zainstalowanego w systemie Python 3.8+.",
+  "usecategorydir_desc": "Utwórz podkatalog w <DestDir> na podstawie nazwy kategorii.\n\nJeśli używasz <AppendCategoryDir>, prawdopodobnie będziesz chciał również włączyć tę opcję.\n\nNOTE: Działa tylko z Category*.Name, a nie z Category*.DestDir.",
+  "usenzbparentdir_desc": "Utwórz podkatalog dla każdego pliku nzb.\n\nMożesz łączyć tę opcję z <UseCategoryDir>.\n\nNOTE: Wyłączenie tej opcji może spowodować utratę danych w zależności od ustawień czyszczenia.\nPrzykład: Wszystkie pliki w folderze pochodzące z wielu źródeł nzb są usuwane podczas importu.",
+  "verbose_desc": "Wyświetlaj więcej komunikatów dziennika.\n\nDo debugowania lub gdy musisz zgłosić błąd."
+}

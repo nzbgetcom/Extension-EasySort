@@ -1,0 +1,14 @@
+{
+  "about": "Mută fișierele după descărcare în alte locații.",
+  "cleanup_desc": "Șterge directorul de descărcare după redenumire.\n\nȘterge directorul de descărcare după procesare. Dacă niciun fișier nu a putut fi procesat,\ndirectorul rămâne neatins.",
+  "description": "Acest script mută fișierele cu extensiile specificate într-un alt director.\nOferă opțiuni flexibile de organizare:\n\n- Modul Plat: Fișierele sunt mutate în directorul `DestDir` specificat.\n- Modul Director Părinte: Fișierele sunt mutate în directorul părinte folosind `DestDir=..` (aplatizare).\n- Modul Subdirector Categorie: Fișierele sunt organizate în subdirectoare în cadrul `DestDir` pe baza categoriei folosind `UseCategoryDir`.\n- Modul Subdirector Părinte NZB: Fișierele sunt organizate în subdirectoare în cadrul `DestDir` pe baza numelui fișierului NZB folosind `UseNzbParentDir`\n\nPuteți combina `UseCategoryDir` și `UseNzbParentDir` pentru o organizare suplimentară.\n\nÎn plus, există o opțiune pentru a șterge directorul sursă împreună cu toate fișierele rămase.",
+  "destdir_desc": "Directorul de destinație în care vor fi mutate toate fișierele.\n\nSetați la \"..\" pentru a muta în directorul părinte (modul de aplatizare).",
+  "extensions_desc": "Extensiile de fișiere de procesat.\n\nSunt procesate doar fișierele cu aceste extensii. Extensiile trebuie\nseparate prin virgule.\n\nExample=.mkv,.avi,.divx\n\nDacă lista de extensii este goală, toate fișierele sunt procesate.",
+  "minsize_desc": "Dimensiunea minimă a fișierului (Kilobytes).\n\nFișierele mai mici sunt ignorate.\nUtilizați \"0\" pentru a include toate fișierele.",
+  "overwrite_desc": "Suprascrie fișierele la destinație.\n\nDacă nu este activă, fișierele sunt totuși mutate la destinație, dar\nse adaugă sufixe unice la sfârșitul numelor de fișiere, ex. My.File.(2).mkv.",
+  "preview_desc": "Modul previzualizare.\n\nCând este activ, nu se fac modificări în sistemul de fișiere, dar numele\nfișierelor de destinație sunt înregistrate în jurnal. Util pentru depanare.",
+  "requirements": "Acest script necesită instalarea Python 3.8+ pe sistemul dumneavoastră.",
+  "usecategorydir_desc": "Creează un subdirector în <DestDir> pe baza numelui categoriei.\n\nDacă utilizați <AppendCategoryDir>, probabil veți dori să activați și această opțiune.\n\nNOTE: Funcționează doar cu Category*.Name și nu cu Category*.DestDir.",
+  "usenzbparentdir_desc": "Creează un subdirector pentru fiecare fișier nzb.\n\nPuteți combina această opțiune cu <UseCategoryDir>.\n\nNOTE: Dezactivarea acestei opțiuni poate duce la pierderea datelor în funcție de setările de curățare.\nExemplu: Toate fișierele din folder provenite din mai multe surse nzb sunt șterse la import.",
+  "verbose_desc": "Afișează mai multe mesaje de jurnal.\n\nPentru depanare sau dacă trebuie să raportați o eroare."
+}

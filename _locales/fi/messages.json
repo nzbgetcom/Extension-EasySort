@@ -1,0 +1,14 @@
+{
+  "about": "Siirtää tiedostot latauksen jälkeen muihin sijainteihin.",
+  "cleanup_desc": "Poista lataushakemisto uudelleennimeämisen jälkeen.\n\nPoista lataushakemisto käsittelyn jälkeen. Jos yhtään tiedostoa ei voitu käsitellä,\nhakemisto jätetään koskemattomaksi.",
+  "description": "Tämä skripti siirtää tiedostot, joilla on määritetyt laajennukset, toiseen hakemistoon.\nSe tarjoaa joustavia järjestelyvaihtoehtoja:\n\n- Tasatila: Tiedostot siirretään määritettyyn `DestDir`-hakemistoon.\n- Yläkansiotila: Tiedostot siirretään yläkansiooon käyttämällä `DestDir=..` (tasoitus).\n- Kategorian alikansiotila: Tiedostot järjestetään alikansioihin `DestDir`-hakemistossa kategorian perusteella käyttämällä `UseCategoryDir`.\n- NZB-yläkansiotila: Tiedostot järjestetään alikansioihin `DestDir`-hakemistossa NZB-tiedostonimen perusteella käyttämällä `UseNzbParentDir`\n\nVoit yhdistää `UseCategoryDir`- ja `UseNzbParentDir`-asetukset lisäjärjestelyä varten.\n\nLisäksi on vaihtoehto poistaa lähdekansiosta kaikki jäljellä olevat tiedostot.",
+  "destdir_desc": "Kohdehakemisto, johon kaikki tiedostot siirretään.\n\nAseta arvoksi \"..\" siirtääksesi yläkansioon (tasoitustila).",
+  "extensions_desc": "Käsiteltävät tiedostopäätteet.\n\nVain tiedostot, joilla on nämä päätteet, käsitellään. Päätteet on\nerotettava pilkuilla.\n\nExample=.mkv,.avi,.divx\n\nJos päätteiden lista on tyhjä, kaikki tiedostot käsitellään.",
+  "minsize_desc": "Tiedoston vähimmäiskoko (kilotavua).\n\nPienempiä tiedostoja ei huomioida.\nKäytä \"0\" sisällyttääksesi kaikki tiedostot.",
+  "overwrite_desc": "Korvaa tiedostot kohteessa.\n\nJos ei ole aktiivinen, tiedostot siirretään silti kohteeseen, mutta\ntiedostonimien loppuun lisätään yksilölliset päätteet, esim. My.File.(2).mkv.",
+  "preview_desc": "Esikatselutila.\n\nKun aktiivinen, tiedostojärjestelmään ei tehdä muutoksia, mutta kohde-\ntiedostonimet kirjataan lokiin. Hyödyllinen virheenkorjaukseen.",
+  "requirements": "Tämä skripti vaatii Python 3.8+ -asennuksen järjestelmääsi.",
+  "usecategorydir_desc": "Luo alikansio <DestDir>-hakemistoon kategorian nimen perusteella.\n\nJos käytät <AppendCategoryDir>-asetusta, haluat todennäköisesti myös tämän vaihtoehdon käytössä.\n\nNOTE: Se toimii vain Category*.Name-asetuksen kanssa, ei Category*.DestDir-asetuksen kanssa.",
+  "usenzbparentdir_desc": "Luo alikansio jokaiselle nzb-tiedostolle.\n\nVoit yhdistää tämän vaihtoehdon <UseCategoryDir>-asetuksen kanssa.\n\nNOTE: Tämän vaihtoehdon poistaminen käytöstä voi aiheuttaa tietojen menetyksen puhdistusasetusten perusteella.\nEsimerkki: Kaikki kansion tiedostot useista nzb-lähteistä poistetaan tuonnin yhteydessä.",
+  "verbose_desc": "Tulosta enemmän lokiviestejä.\n\nVirheenkorjausta varten tai jos sinun täytyy raportoida virheestä."
+}

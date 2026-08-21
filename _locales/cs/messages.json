@@ -1,0 +1,14 @@
+{
+  "about": "Přesune soubory po stažení do jiných umístění.",
+  "cleanup_desc": "Smazat adresář stahování po přejmenování.\n\nSmazat adresář stahování po zpracování. Pokud nebylo možné zpracovat žádné soubory,\nadresář zůstane nedotčen.",
+  "description": "Tento skript přesune soubory se zadanými příponami do jiného adresáře.\nNabízí flexibilní možnosti organizace:\n\n- Plochý režim: Soubory jsou přesunuty do zadaného adresáře `DestDir`.\n- Režim nadřazeného adresáře: Soubory jsou přesunuty do nadřazeného adresáře pomocí `DestDir=..` (zploštění).\n- Režim podadresáře kategorie: Soubory jsou organizovány do podadresářů v rámci `DestDir` podle kategorie pomocí `UseCategoryDir`.\n- Režim podadresáře nadřazeného NZB: Soubory jsou organizovány do podadresářů v rámci `DestDir` podle názvu NZB souboru pomocí `UseNzbParentDir`\n\nMůžete kombinovat `UseCategoryDir` a `UseNzbParentDir` pro další organizaci.\n\nNavíc je k dispozici možnost smazat zdrojový adresář se všemi zbývajícími soubory.",
+  "destdir_desc": "Cílový adresář, do kterého budou přesunuty všechny soubory.\n\nNastavte na \"..\" pro přesun do nadřazeného adresáře (plochý režim).",
+  "extensions_desc": "Přípony souborů ke zpracování.\n\nZpracovány jsou pouze soubory s těmito příponami. Přípony musí\nbýt odděleny čárkami.\n\nExample=.mkv,.avi,.divx\n\nPokud je seznam přípon prázdný, jsou zpracovány všechny soubory.",
+  "minsize_desc": "Minimální velikost souboru (kilobajty).\n\nMenší soubory jsou ignorovány.\nPoužijte \"0\" pro zahrnutí všech souborů.",
+  "overwrite_desc": "Přepsat soubory v cílovém umístění.\n\nPokud není aktivní, soubory jsou stále přesunuty do cíle, ale\nna konec názvů souborů jsou přidány jedinečné přípony, např. My.File.(2).mkv.",
+  "preview_desc": "Režim náhledu.\n\nPokud je aktivní, nejsou provedeny žádné změny v souborovém systému, ale cílové\nnázvy souborů jsou zaznamenány. Užitečné pro ladění.",
+  "requirements": "Tento skript vyžaduje instalaci Python 3.8+ ve vašem systému.",
+  "usecategorydir_desc": "Vytvořit podadresář v <DestDir> na základě názvu kategorie.\n\nPokud používáte <AppendCategoryDir>, pravděpodobně budete chtít tuto možnost také povolit.\n\nNOTE: Funguje pouze s Category*.Name a nikoli s Category*.DestDir.",
+  "usenzbparentdir_desc": "Vytvořit podadresář pro každý nzb-soubor.\n\nTuto možnost můžete kombinovat s <UseCategoryDir>.\n\nNOTE: Zakázání této možnosti může způsobit ztrátu dat v závislosti na nastavení čištění.\nPříklad: Všechny soubory ve složce z více nzb zdrojů jsou při importu smazány.",
+  "verbose_desc": "Zobrazit více zpráv protokolu.\n\nPro ladění nebo pokud potřebujete nahlásit chybu."
+}

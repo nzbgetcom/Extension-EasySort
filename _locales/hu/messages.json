@@ -1,0 +1,14 @@
+{
+  "about": "Letöltés után más helyekre helyezi át a fájlokat.",
+  "cleanup_desc": "Letöltési könyvtár törlése átnevezés után.\n\nA letöltési könyvtár törlése a feldolgozás után. Ha egyetlen fájl sem volt feldolgozható,\na könyvtár érintetlen marad.",
+  "description": "Ez a szkript a megadott kiterjesztésű fájlokat egy másik könyvtárba helyezi át.\nRugalmas szervezési lehetőségeket kínál:\n\n- Lapos mód: A fájlok a megadott `DestDir` könyvtárba kerülnek.\n- Szülőkönyvtár mód: A fájlok a szülőkönyvtárba kerülnek a `DestDir=..` használatával (lapítás).\n- Kategória-alkönyvtár mód: A fájlok a `DestDir`-en belüli alkönyvtárakba kerülnek a kategória alapján a `UseCategoryDir` segítségével.\n- NZB szülő-alkönyvtár mód: A fájlok a `DestDir`-en belüli alkönyvtárakba kerülnek az NZB fájlnév alapján a `UseNzbParentDir` segítségével\n\nA `UseCategoryDir` és a `UseNzbParentDir` kombinálható a további szervezéshez.\n\nEzenkívül lehetőség van a forráskönyvtár összes maradék fájllal együtt történő törlésére.",
+  "destdir_desc": "Célkönyvtár, ahová az összes fájl áthelyezésre kerül.\n\nÁllítsd \"..\" értékre a szülőkönyvtárba való áthelyezéshez (lapos mód).",
+  "extensions_desc": "Feldolgozandó fájlkiterjesztések.\n\nCsak az ezekkel a kiterjesztésekkel rendelkező fájlok kerülnek feldolgozásra. A kiterjesztéseket\nvesszővel kell elválasztani.\n\nExample=.mkv,.avi,.divx\n\nHa a kiterjesztések listája üres, az összes fájl feldolgozásra kerül.",
+  "minsize_desc": "Minimális fájlméret (kilobájt).\n\nA kisebb fájlok figyelmen kívül maradnak.\nHasználd a \"0\" értéket az összes fájl belefoglalásához.",
+  "overwrite_desc": "Fájlok felülírása a célhelyen.\n\nHa nincs aktív, a fájlok még mindig a célhelyre kerülnek, de\negyedi utótagok kerülnek a fájlnevek végére, pl. My.File.(2).mkv.",
+  "preview_desc": "Előnézeti mód.\n\nAktív állapotban nem történnek változások a fájlrendszerben, de a cél\nfájlnevek naplózásra kerülnek. Hibakereséshez hasznos.",
+  "requirements": "Ez a szkript Python 3.8+ telepítését igényli a rendszeren.",
+  "usecategorydir_desc": "Alkönyvtár létrehozása a <DestDir>-ben a kategória neve alapján.\n\nHa az <AppendCategoryDir> opciót használod, valószínűleg ezt az opciót is engedélyezni szeretnéd.\n\nNOTE: Csak a Category*.Name esetén működik, a Category*.DestDir esetén nem.",
+  "usenzbparentdir_desc": "Alkönyvtár létrehozása minden egyes nzb-fájlhoz.\n\nEzt az opciót kombinálhatod a <UseCategoryDir> opcióval.\n\nNOTE: Ennek az opciónak a letiltása adatvesztést okozhat a tisztítási beállításaidtól függően.\nPélda: A mappában lévő összes fájl több nzb-forrásból importáláskor törlődik.",
+  "verbose_desc": "További naplóüzenetek megjelenítése.\n\nHibakereséshez vagy ha hibát kell jelentened."
+}

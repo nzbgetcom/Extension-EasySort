@@ -1,0 +1,14 @@
+{
+  "about": "Verplaatst bestanden na het downloaden naar andere locaties.",
+  "cleanup_desc": "Verwijder de downloadmap na het hernoemen.\n\nVerwijder de downloadmap na verwerking. Als er geen bestanden konden worden verwerkt,\nblijft de map ongewijzigd.",
+  "description": "Dit script verplaatst bestanden met opgegeven extensies naar een andere map.\nHet biedt flexibele organisatieopties:\n\n- Platte modus: Bestanden worden verplaatst naar de opgegeven `DestDir`-map.\n- Bovenliggende mapsmodus: Bestanden worden verplaatst naar de bovenliggende map met `DestDir=..` (afvlakken).\n- Categorie-submapsmodus: Bestanden worden georganiseerd in submappen binnen `DestDir` op basis van de categorie met `UseCategoryDir`.\n- NZB bovenliggende submapsmodus: Bestanden worden georganiseerd in submappen binnen `DestDir` op basis van de NZB-bestandsnaam met `UseNzbParentDir`\n\nU kunt `UseCategoryDir` en `UseNzbParentDir` combineren voor verdere organisatie.\n\nDaarnaast is er een optie om de bronmap met alle resterende bestanden te verwijderen.",
+  "destdir_desc": "Doelmap waarnaar alle bestanden worden verplaatst.\n\nStel in op \"..\" om naar de bovenliggende map te verplaatsen (afvlakkingsmodus).",
+  "extensions_desc": "Bestandsextensies om te verwerken.\n\nAlleen bestanden met deze extensies worden verwerkt. Extensies moeten\nworden gescheiden door komma's.\n\nExample=.mkv,.avi,.divx\n\nAls de lijst met extensies leeg is, worden alle bestanden verwerkt.",
+  "minsize_desc": "Minimale bestandsgrootte (kilobytes).\n\nKleinere bestanden worden genegeerd.\nGebruik \"0\" om alle bestanden op te nemen.",
+  "overwrite_desc": "Bestanden op de bestemming overschrijven.\n\nAls dit niet actief is, worden de bestanden toch naar de bestemming verplaatst, maar\nworden unieke achtervoegsels toegevoegd aan het einde van bestandsnamen, bijv. My.File.(2).mkv.",
+  "preview_desc": "Voorbeeldmodus.\n\nWanneer actief worden er geen wijzigingen in het bestandssysteem aangebracht, maar worden de doelbestandsnamen geregistreerd. Handig voor foutopsporing.",
+  "requirements": "Dit script vereist dat Python 3.8+ op uw systeem is geïnstalleerd.",
+  "usecategorydir_desc": "Maak een submap aan in <DestDir> op basis van de categorienaam.\n\nAls u <AppendCategoryDir> gebruikt, wilt u deze optie waarschijnlijk ook inschakelen.\n\nNOTE: Dit werkt alleen met Category*.Name en niet met Category*.DestDir.",
+  "usenzbparentdir_desc": "Maak een submap aan voor elk nzb-bestand.\n\nU kunt deze optie combineren met <UseCategoryDir>.\n\nNOTE: Het uitschakelen van deze optie kan leiden tot gegevensverlies op basis van uw opschoningsinstellingen.\nVoorbeeld: Alle bestanden in de map van meerdere nzb-bronnen worden verwijderd bij importeren.",
+  "verbose_desc": "Meer logberichten weergeven.\n\nVoor foutopsporing of als u een bug wilt melden."
+}
