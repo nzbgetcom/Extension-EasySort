@@ -1,0 +1,50 @@
+{
+    "about": {
+        "message": "Moves files after download into other locations.",
+        "description": "Short description of the Easy Sort extension shown in settings."
+    },
+    "description": {
+        "message": "This script moves files with specified extensions into another directory.\nIt offers flexible organization options:\n\n- Flat Mode: Files are moved into the specified `DestDir` directory.\n- Parent Directory Mode: Files are moved into the parent directory using `DestDir=..` (flattening).\n- Category Subdirectory Mode:  Files are organized into subdirectories within `DestDir` based on the category using `UseCategoryDir`.\n- NZB Parent Subdirectory Mode: Files are organized into subdirectories within `DestDir` based on the NZB filename using `UseNzbParentDir`\n\nYou can combine `UseCategoryDir` and `UseNzbParentDir` for further organization.\n\nAdditionally, there is an option to delete the source directory with all remaining files.",
+        "description": "Full description of the extension shown in settings."
+    },
+    "requirements": {
+        "message": "This script requires Python 3.8+ to be installed on your system.",
+        "description": "System requirements (each requirement is a separate string). DO NOT translate technical version strings (e.g., Python 3.8.x)."
+    },
+    "destdir_desc": {
+        "message": "Destination directory to move all files into.\n\nSet to \"..\" to move into parent directory (flatten mode).",
+        "description": "Help text for the DestDir option in Easy Sort. DO NOT translate technical or example values enclosed in quotes."
+    },
+    "usecategorydir_desc": {
+        "message": "Create subdirectory in <DestDir> based on category-name.\n\nIf you use <AppendCategoryDir> you will probably also want this option enabled.\n\nNOTE: It only works with Category*.Name and not Category*.DestDir.",
+        "description": "Help text for the UseCategoryDir option in Easy Sort. DO NOT translate option names enclosed in angle brackets (e.g., <MinSize>, <TvCategories>). DO NOT translate the exact uppercase label (NOTE) as they are used to render UI badges."
+    },
+    "usenzbparentdir_desc": {
+        "message": "Create subdirectory for each nzb-file.\n\nYou can combine this option with <UseCategoryDir>.\n\nNOTE: Disabling this option may cause losing data based on your clean-up settings.\nExample: All files in the folder from multiple nzb sources are deleted on import.",
+        "description": "Help text for the UseNzbParentDir option in Easy Sort. DO NOT translate option names enclosed in angle brackets (e.g., <MinSize>, <TvCategories>). DO NOT translate the exact uppercase label (NOTE) as they are used to render UI badges."
+    },
+    "extensions_desc": {
+        "message": "File extensions to process.\n\nOnly files with these extensions are processed. Extensions must\nbe separated with commas.\n\nExample=.mkv,.avi,.divx\n\nIf the list of extensions is empty all files are processed.",
+        "description": "Help text for the Extensions option in Easy Sort. DO NOT translate the example value after 'Example='."
+    },
+    "minsize_desc": {
+        "message": "Minimum file size (Kilobytes).\n\nSmaller files are ignored.\nUse \"0\" for including all files.",
+        "description": "Help text for the MinSize option in Easy Sort. DO NOT translate technical or example values enclosed in quotes."
+    },
+    "overwrite_desc": {
+        "message": "Overwrite files at destination.\n\nIf not active the files are still moved into destination but\nunique suffixes are added at the end of file names, e.g. My.File.(2).mkv.",
+        "description": "Help text for the Overwrite option in Easy Sort."
+    },
+    "cleanup_desc": {
+        "message": "Delete download directory after renaming.\n\nDelete download directory after processing. If no files could be processed,\nthe directory remains untouched.",
+        "description": "Help text for the Cleanup option in Easy Sort. DO NOT translate the fixed values 'yes' and 'no'."
+    },
+    "preview_desc": {
+        "message": "Preview mode.\n\nWhen active no changes to file system are made but the destination\nfile names are logged. Useful for debugging.",
+        "description": "Help text for the Preview option in Easy Sort. DO NOT translate the fixed values 'yes' and 'no'."
+    },
+    "verbose_desc": {
+        "message": "Print more logging messages.\n\nFor debugging or if you need to report a bug.",
+        "description": "Help text for the Verbose option in Easy Sort."
+    }
+}

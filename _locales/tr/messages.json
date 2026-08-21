@@ -1,0 +1,14 @@
+{
+  "about": "İndirme sonrasında dosyaları başka konumlara taşır.",
+  "cleanup_desc": "Yeniden adlandırma sonrasında indirme dizinini sil.\n\nİşlem sonrasında indirme dizinini sil. Hiçbir dosya işlenemezse,\ndizin dokunulmadan kalır.",
+  "description": "Bu betik, belirtilen uzantılara sahip dosyaları başka bir dizine taşır.\nEsnek organizasyon seçenekleri sunar:\n\n- Düz Mod: Dosyalar belirtilen `DestDir` dizinine taşınır.\n- Üst Dizin Modu: Dosyalar `DestDir=..` kullanılarak üst dizine taşınır (düzleştirme).\n- Kategori Alt Dizin Modu: Dosyalar, `UseCategoryDir` kullanılarak `DestDir` içinde kategoriye göre alt dizinlere düzenlenir.\n- NZB Üst Alt Dizin Modu: Dosyalar, `UseNzbParentDir` kullanılarak `DestDir` içinde NZB dosya adına göre alt dizinlere düzenlenir.\n\nDaha fazla organizasyon için `UseCategoryDir` ve `UseNzbParentDir` seçeneklerini birleştirebilirsiniz.\n\nAyrıca, kaynak dizini kalan tüm dosyalarla birlikte silme seçeneği de mevcuttur.",
+  "destdir_desc": "Tüm dosyaların taşınacağı hedef dizin.\n\nÜst dizine taşımak için \"..\" olarak ayarlayın (düzleştirme modu).",
+  "extensions_desc": "İşlenecek dosya uzantıları.\n\nYalnızca bu uzantılara sahip dosyalar işlenir. Uzantılar virgülle\nayrılmalıdır.\n\nExample=.mkv,.avi,.divx\n\nUzantı listesi boşsa tüm dosyalar işlenir.",
+  "minsize_desc": "Minimum dosya boyutu (Kilobayt).\n\nDaha küçük dosyalar yoksayılır.\nTüm dosyaları dahil etmek için \"0\" kullanın.",
+  "overwrite_desc": "Hedefteki dosyaların üzerine yaz.\n\nEtkin değilse dosyalar yine de hedefe taşınır ancak\ndosya adlarının sonuna benzersiz son ekler eklenir, örn. My.File.(2).mkv.",
+  "preview_desc": "Önizleme modu.\n\nEtkin olduğunda dosya sisteminde herhangi bir değişiklik yapılmaz ancak hedef\ndosya adları günlüğe kaydedilir. Hata ayıklama için kullanışlıdır.",
+  "requirements": "Bu betik, sisteminizde Python 3.8+ kurulu olmasını gerektirir.",
+  "usecategorydir_desc": "<DestDir> içinde kategori adına göre alt dizin oluştur.\n\n<AppendCategoryDir> kullanıyorsanız, muhtemelen bu seçeneği de etkinleştirmek isteyeceksiniz.\n\nNOTE: Yalnızca Category*.Name ile çalışır, Category*.DestDir ile çalışmaz.",
+  "usenzbparentdir_desc": "Her nzb dosyası için alt dizin oluştur.\n\nBu seçeneği <UseCategoryDir> ile birleştirebilirsiniz.\n\nNOTE: Bu seçeneği devre dışı bırakmak, temizleme ayarlarınıza bağlı olarak veri kaybına neden olabilir.\nÖrnek: Birden fazla nzb kaynağından gelen klasördeki tüm dosyalar içe aktarma sırasında silinir.",
+  "verbose_desc": "Daha fazla günlük mesajı yazdır.\n\nHata ayıklama için veya bir hata bildirmeniz gerektiğinde."
+}

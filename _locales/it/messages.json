@@ -1,0 +1,14 @@
+{
+  "about": "Sposta i file dopo il download in altre posizioni.",
+  "cleanup_desc": "Elimina la directory di download dopo la rinomina.\n\nElimina la directory di download dopo l'elaborazione. Se nessun file può essere elaborato,\nla directory rimane invariata.",
+  "description": "Questo script sposta i file con le estensioni specificate in un'altra directory.\nOffre opzioni di organizzazione flessibili:\n\n- Modalità Flat: I file vengono spostati nella directory `DestDir` specificata.\n- Modalità Directory Padre: I file vengono spostati nella directory padre usando `DestDir=..` (appiattimento).\n- Modalità Sottodirectory per Categoria: I file vengono organizzati in sottodirectory all'interno di `DestDir` in base alla categoria usando `UseCategoryDir`.\n- Modalità Sottodirectory Padre NZB: I file vengono organizzati in sottodirectory all'interno di `DestDir` in base al nome del file NZB usando `UseNzbParentDir`\n\nÈ possibile combinare `UseCategoryDir` e `UseNzbParentDir` per un'ulteriore organizzazione.\n\nInoltre, è disponibile un'opzione per eliminare la directory sorgente con tutti i file rimanenti.",
+  "destdir_desc": "Directory di destinazione in cui spostare tutti i file.\n\nImpostare su \"..\" per spostare nella directory padre (modalità flat).",
+  "extensions_desc": "Estensioni di file da elaborare.\n\nVengono elaborati solo i file con queste estensioni. Le estensioni devono\nessere separate da virgole.\n\nExample=.mkv,.avi,.divx\n\nSe l'elenco delle estensioni è vuoto, vengono elaborati tutti i file.",
+  "minsize_desc": "Dimensione minima del file (Kilobyte).\n\nI file più piccoli vengono ignorati.\nUsare \"0\" per includere tutti i file.",
+  "overwrite_desc": "Sovrascrivi i file nella destinazione.\n\nSe non attivo, i file vengono comunque spostati nella destinazione ma\nvengono aggiunti suffissi univoci alla fine dei nomi dei file, ad es. My.File.(2).mkv.",
+  "preview_desc": "Modalità anteprima.\n\nQuando attiva, non vengono apportate modifiche al file system ma i nomi\ndei file di destinazione vengono registrati nel log. Utile per il debug.",
+  "requirements": "Questo script richiede l'installazione di Python 3.8+ sul sistema.",
+  "usecategorydir_desc": "Crea una sottodirectory in <DestDir> basata sul nome della categoria.\n\nSe si utilizza <AppendCategoryDir> probabilmente si vorrà abilitare anche questa opzione.\n\nNOTE: Funziona solo con Category*.Name e non con Category*.DestDir.",
+  "usenzbparentdir_desc": "Crea una sottodirectory per ogni file nzb.\n\nÈ possibile combinare questa opzione con <UseCategoryDir>.\n\nNOTE: Disabilitare questa opzione potrebbe causare la perdita di dati in base alle impostazioni di pulizia.\nEsempio: Tutti i file nella cartella provenienti da più sorgenti nzb vengono eliminati durante l'importazione.",
+  "verbose_desc": "Stampa più messaggi di log.\n\nPer il debug o se è necessario segnalare un bug."
+}

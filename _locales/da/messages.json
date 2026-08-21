@@ -1,0 +1,14 @@
+{
+  "about": "Flytter filer efter download til andre placeringer.",
+  "cleanup_desc": "Slet downloadmappe efter omdøbning.\n\nSlet downloadmappe efter behandling. Hvis ingen filer kunne behandles,\nforbliver mappen uberørt.",
+  "description": "Dette script flytter filer med angivne udvidelser til en anden mappe.\nDet tilbyder fleksible organiseringsmuligheder:\n\n- Flad tilstand: Filer flyttes til den angivne `DestDir`-mappe.\n- Overordnet mappetilstand: Filer flyttes til den overordnede mappe ved hjælp af `DestDir=..` (fladgøring).\n- Kategori-undermappetilstand: Filer organiseres i undermapper inden for `DestDir` baseret på kategorien ved hjælp af `UseCategoryDir`.\n- NZB overordnet undermappetilstand: Filer organiseres i undermapper inden for `DestDir` baseret på NZB-filnavnet ved hjælp af `UseNzbParentDir`\n\nDu kan kombinere `UseCategoryDir` og `UseNzbParentDir` for yderligere organisering.\n\nDerudover er der en mulighed for at slette kildemappen med alle resterende filer.",
+  "destdir_desc": "Destinationsmappe, som alle filer flyttes til.\n\nSæt til \"..\" for at flytte til den overordnede mappe (flad tilstand).",
+  "extensions_desc": "Filudvidelser der skal behandles.\n\nKun filer med disse udvidelser behandles. Udvidelser skal\nadskilles med kommaer.\n\nExample=.mkv,.avi,.divx\n\nHvis listen over udvidelser er tom, behandles alle filer.",
+  "minsize_desc": "Mindste filstørrelse (kilobytes).\n\nMindre filer ignoreres.\nBrug \"0\" for at inkludere alle filer.",
+  "overwrite_desc": "Overskriv filer på destinationen.\n\nHvis ikke aktivt flyttes filerne stadig til destinationen, men\nunikke suffikser tilføjes i slutningen af filnavnene, f.eks. My.File.(2).mkv.",
+  "preview_desc": "Forhåndsvisningstilstand.\n\nNår aktiv foretages ingen ændringer i filsystemet, men destinations-\nfilnavnene logges. Nyttigt til fejlfinding.",
+  "requirements": "Dette script kræver, at Python 3.8+ er installeret på dit system.",
+  "usecategorydir_desc": "Opret undermappe i <DestDir> baseret på kategorinavn.\n\nHvis du bruger <AppendCategoryDir>, vil du sandsynligvis også aktivere denne indstilling.\n\nNOTE: Det virker kun med Category*.Name og ikke Category*.DestDir.",
+  "usenzbparentdir_desc": "Opret undermappe for hver nzb-fil.\n\nDu kan kombinere denne indstilling med <UseCategoryDir>.\n\nNOTE: Deaktivering af denne indstilling kan medføre tab af data baseret på dine oprydningsindstillinger.\nEksempel: Alle filer i mappen fra flere nzb-kilder slettes ved import.",
+  "verbose_desc": "Udskriv flere logbeskeder.\n\nTil fejlfinding eller hvis du skal rapportere en fejl."
+}
