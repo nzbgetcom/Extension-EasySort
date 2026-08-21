@@ -1,0 +1,14 @@
+{
+  "about": "Mover arquivos após o download para outros locais.",
+  "cleanup_desc": "Excluir o diretório de download após renomear.\n\nExcluir o diretório de download após o processamento. Se nenhum arquivo puder ser processado,\no diretório permanece intocado.",
+  "description": "Este script move arquivos com extensões especificadas para outro diretório.\nEle oferece opções flexíveis de organização:\n\n- Modo Simples: Os arquivos são movidos para o diretório `DestDir` especificado.\n- Modo Diretório Pai: Os arquivos são movidos para o diretório pai usando `DestDir=..` (achatamento).\n- Modo Subdiretório por Categoria: Os arquivos são organizados em subdiretórios dentro de `DestDir` com base na categoria usando `UseCategoryDir`.\n- Modo Subdiretório Pai do NZB: Os arquivos são organizados em subdiretórios dentro de `DestDir` com base no nome do arquivo NZB usando `UseNzbParentDir`\n\nVocê pode combinar `UseCategoryDir` e `UseNzbParentDir` para uma organização mais detalhada.\n\nAlém disso, há uma opção para excluir o diretório de origem com todos os arquivos restantes.",
+  "destdir_desc": "Diretório de destino para mover todos os arquivos.\n\nDefina como \"..\" para mover para o diretório pai (modo de achatamento).",
+  "extensions_desc": "Extensões de arquivo a processar.\n\nApenas arquivos com essas extensões são processados. As extensões devem\nser separadas por vírgulas.\n\nExample=.mkv,.avi,.divx\n\nSe a lista de extensões estiver vazia, todos os arquivos são processados.",
+  "minsize_desc": "Tamanho mínimo do arquivo (Kilobytes).\n\nArquivos menores são ignorados.\nUse \"0\" para incluir todos os arquivos.",
+  "overwrite_desc": "Sobrescrever arquivos no destino.\n\nSe não estiver ativo, os arquivos ainda são movidos para o destino, mas\nsufixos únicos são adicionados ao final dos nomes dos arquivos, ex.: My.File.(2).mkv.",
+  "preview_desc": "Modo de visualização.\n\nQuando ativo, nenhuma alteração é feita no sistema de arquivos, mas os nomes\ndos arquivos de destino são registrados. Útil para depuração.",
+  "requirements": "Este script requer Python 3.8+ instalado no seu sistema.",
+  "usecategorydir_desc": "Criar subdiretório em <DestDir> com base no nome da categoria.\n\nSe você usar <AppendCategoryDir>, provavelmente também vai querer esta opção habilitada.\n\nNOTE: Funciona apenas com Category*.Name e não com Category*.DestDir.",
+  "usenzbparentdir_desc": "Criar subdiretório para cada arquivo nzb.\n\nVocê pode combinar esta opção com <UseCategoryDir>.\n\nNOTE: Desabilitar esta opção pode causar perda de dados com base nas suas configurações de limpeza.\nExemplo: Todos os arquivos na pasta de múltiplas fontes nzb são excluídos na importação.",
+  "verbose_desc": "Exibir mais mensagens de log.\n\nPara depuração ou se precisar reportar um erro."
+}

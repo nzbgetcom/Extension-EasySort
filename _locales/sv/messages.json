@@ -1,0 +1,14 @@
+{
+  "about": "Flyttar filer efter nedladdning till andra platser.",
+  "cleanup_desc": "Radera nedladdningskatalogen efter namnbyte.\n\nRadera nedladdningskatalogen efter bearbetning. Om inga filer kunde bearbetas\nlämnas katalogen orörd.",
+  "description": "Det här skriptet flyttar filer med angivna filändelser till en annan katalog.\nDet erbjuder flexibla organisationsalternativ:\n\n- Platt läge: Filer flyttas till den angivna `DestDir`-katalogen.\n- Överordnad katalog-läge: Filer flyttas till den överordnade katalogen med `DestDir=..` (tillplattning).\n- Kategoriunderkatalog-läge: Filer organiseras i underkataloger inom `DestDir` baserat på kategorin med `UseCategoryDir`.\n- NZB överordnad underkatalog-läge: Filer organiseras i underkataloger inom `DestDir` baserat på NZB-filnamnet med `UseNzbParentDir`\n\nDu kan kombinera `UseCategoryDir` och `UseNzbParentDir` för ytterligare organisation.\n\nDessutom finns ett alternativ för att radera källkatalogen med alla återstående filer.",
+  "destdir_desc": "Målkatalog dit alla filer ska flyttas.\n\nSätt till \"..\" för att flytta till överordnad katalog (platt läge).",
+  "extensions_desc": "Filändelser att bearbeta.\n\nEndast filer med dessa filändelser bearbetas. Filändelser måste\nsepareras med kommatecken.\n\nExample=.mkv,.avi,.divx\n\nOm listan med filändelser är tom bearbetas alla filer.",
+  "minsize_desc": "Minsta filstorlek (kilobyte).\n\nMindre filer ignoreras.\nAnvänd \"0\" för att inkludera alla filer.",
+  "overwrite_desc": "Skriv över filer vid målet.\n\nOm alternativet inte är aktivt flyttas filerna ändå till målet men\nunika suffix läggs till i slutet av filnamnen, t.ex. My.File.(2).mkv.",
+  "preview_desc": "Förhandsgranskningsläge.\n\nNär det är aktivt görs inga ändringar i filsystemet men målfilernas\nnamn loggas. Användbart för felsökning.",
+  "requirements": "Det här skriptet kräver att Python 3.8+ är installerat på ditt system.",
+  "usecategorydir_desc": "Skapa underkatalog i <DestDir> baserat på kategorinamn.\n\nOm du använder <AppendCategoryDir> vill du förmodligen också aktivera det här alternativet.\n\nNOTE: Det fungerar bara med Category*.Name och inte Category*.DestDir.",
+  "usenzbparentdir_desc": "Skapa underkatalog för varje nzb-fil.\n\nDu kan kombinera det här alternativet med <UseCategoryDir>.\n\nNOTE: Att inaktivera det här alternativet kan leda till dataförlust beroende på dina rensningsinställningar.\nExempel: Alla filer i mappen från flera nzb-källor raderas vid import.",
+  "verbose_desc": "Skriv ut fler loggmeddelanden.\n\nFör felsökning eller om du behöver rapportera ett fel."
+}
