@@ -25,6 +25,8 @@ import os
 import shutil
 import traceback
 
+sys.stdout.reconfigure(encoding="utf-8")
+
 # Exit codes used by NZBGet
 POSTPROCESS_SUCCESS = 93
 POSTPROCESS_NONE = 95
@@ -280,7 +282,7 @@ for old_path in move_files:
 
     except Exception as e:
         errors = True
-        print("[ERROR] Failed: %s" % old_filename)
+        print("[ERROR] Failed: %s" % old_path)
         print("[ERROR] %s" % e)
         traceback.print_exc()
 
