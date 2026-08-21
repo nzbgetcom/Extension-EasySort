@@ -4,7 +4,7 @@
 	"homepage": "https://github.com/nzbgetcom/Extension-EasySort/",
 	"kind": "POST-PROCESSING",
 	"displayName": "Easy Sort",
-	"version": "3.1",
+	"version": "3.2",
 	"nzbgetMinVersion": "23.0",
 	"author": "Andrey Prygunkov",
 	"license": "GPLv3",
